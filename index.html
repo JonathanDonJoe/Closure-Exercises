@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Closure Exercises</title>
+</head>
+<body>   
+<script>
+
+const counter = function (num) {
+    let count = num;
+    return {
+        'increment' : function() {
+            count++;
+            console.log(count);
+        },
+        'decrement' : function() {
+            count--;
+            console.log(count);
+        }
+    }
+}
+
+var count = counter(4);
+count.increment();
+count.increment();
+count.decrement();
+count.decrement();
+
+</script>
+</body>
+</html>
